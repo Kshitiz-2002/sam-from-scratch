@@ -22,7 +22,6 @@
 *.pdf
 
 # --- Notebooks ---
-*.ipynb
 .ipynb_checkpoints/
 
 # --- Python ---
