@@ -1,0 +1,61 @@
+# --- Everything git ignores, plus build-context bloat ---
+
+# Model weights — the Dockerfile downloads these at build time
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+
+# Media & docs
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.pdf
+
+# Notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# Virtual envs — never copy these into an image
+.venv/
+venv/
+env/
+
+# Training artifacts
+runs/
+logs/
+checkpoints/
+*_weights/
+wandb/
+
+# Git & CI
+.git/
+.gitignore
+.github/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docker itself
+Dockerfile
+.dockerignore
+
+# Docs
+README.md
+DEPLOY.md
+*.md

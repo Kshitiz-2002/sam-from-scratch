@@ -1,0 +1,64 @@
+# --- Model weights & data (large, downloadable) ---
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+
+# --- Images & media ---
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.mp4
+*.avi
+!assets/*.png
+!assets/*.jpg
+
+# --- Papers / docs ---
+*.pdf
+
+# --- Notebooks ---
+*.ipynb
+.ipynb_checkpoints/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Training artifacts ---
+runs/
+logs/
+checkpoints/
+*_weights/
+wandb/
+outputs/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Env / secrets ---
+.env
+.env.*
+*.key
