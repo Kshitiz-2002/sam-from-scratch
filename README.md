@@ -11,9 +11,9 @@ every tensor maps onto the implementation under `strict=True`.
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 
 <p align="center">
-  <img src="assets/demo.png" width="760" alt="Three candidate segmentation masks from a single click, ranked by predicted IoU">
+  <img src="assets/demo.png" width="820" alt="Segmentation results on three images from single-point prompts">
   <br>
-  <em>A single click is ambiguous. The model returns three nested interpretations and ranks them with a learned quality estimator.</em>
+  <em>Single-point prompts on unseen images. The star marks the click; the overlay is the model's highest-confidence mask.</em>
 </p>
 
 ---
@@ -71,7 +71,7 @@ web application exploits this with separate `/embed` and `/segment` endpoints.
 **Local installation:**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/sam-from-scratch
+git clone https://github.com/Kshitiz-2002/sam-from-scratch
 cd sam-from-scratch
 pip install -r requirements.txt
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
@@ -220,6 +220,12 @@ regressing toward an average of valid interpretations, the decoder emits three
 nested candidates, and the IoU token is decoded into a predicted quality score
 for each so they can be ranked. A fourth token handles the unambiguous
 multi-prompt case.
+
+<p align="center">
+  <img src="assets/ambiguity.png" width="820" alt="Three nested mask candidates from a single click, with predicted IoU scores">
+  <br>
+  <em>One click, three valid interpretations: the vehicle, the cargo shelf and panel, and the shelf alone. The model returns all three and ranks them.</em>
+</p>
 
 ---
 
